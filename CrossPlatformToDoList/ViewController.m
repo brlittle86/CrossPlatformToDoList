@@ -12,7 +12,9 @@
 @import FirebaseAuth;
 @import Firebase;
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property(strong, nonatomic) NSMutableArray *allTodos;
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
@@ -21,12 +23,17 @@
 @property (weak, nonatomic) IBOutlet UIView *addTodoContainer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTodoTop;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
 }
 
@@ -78,7 +85,7 @@
     self.allTodosHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue
                                                                        withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
                                                                            
-                                                                           NSMutableArray *allTodos = [[NSMutableArray alloc] init];
+                                                                           self.allTodos = [[NSMutableArray alloc] init];
                                                                            
                                                                            for (FIRDataSnapshot *child in snapshot.children) {
                                                                                
@@ -88,6 +95,11 @@
                                                                                
                                                                                //for lab, append new 'Todo' to allTodos array
                                                                                NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
+                                                                               [self.allTodos addObject:child];
+                                                                               
+                                                                           }
+                                                                           
+                                                                           for (FIRDataSnapshot *child in self.allTodos) {
                                                                                
                                                                            }
                                                                            
@@ -117,6 +129,23 @@
     
     [self checkUserStatus];
     
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.allTodos.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    
+    FIRDataSnapshot *child = [self.allTodos objectAtIndex:indexPath.row];
+
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child[@"title"]];
+    
+    return cell;
 }
 
 @end

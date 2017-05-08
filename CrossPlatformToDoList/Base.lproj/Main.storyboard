@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="addTodoContainer" destination="eWf-th-GHR" id="Xda-MM-fwq"/>
                         <outlet property="addTodoTop" destination="HO1-EE-Npr" id="uqm-Ax-M9H"/>
+                        <outlet property="tableView" destination="qGP-LO-7LB" id="pca-Wk-8Y3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
