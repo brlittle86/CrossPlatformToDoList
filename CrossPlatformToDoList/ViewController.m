@@ -7,8 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "LoginViewController.h"
+
+@import FirebaseAuth;
+@import Firebase;
 
 @interface ViewController ()
+
+@property(strong, nonatomic) FIRDatabaseReference *userReference;
+@property(strong, nonatomic) FIRUser *currentUser;
+
+@property(nonatomic) FIRDatabaseHandle allTodosHandler;
 
 @end
 
@@ -16,13 +25,72 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [self checkUserStatus];
+    
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//Only here for testing purposes
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [super prepareForSegue:segue sender:sender];
+    
+    NSLog(@"%@", segue.destinationViewController);
+}
+
+//Determine if user is logged in or not | Prompt login if not
+- (void)checkUserStatus{
+    
+    if (![[FIRAuth auth] currentUser]) {
+        
+        LoginViewController *loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        
+        [self presentViewController:loginController animated:YES completion:nil];
+        
+    } else {
+        [self setupFirebase];
+        [self startMonitoringTodoUpdates];
+    }
+    
+}
+
+//Establishes connection with remote database for current user
+- (void)setupFirebase{
+    
+    FIRDatabaseReference *databaseReference = [[FIRDatabase database] reference];
+    self.currentUser = [[FIRAuth auth] currentUser];
+    
+    self.userReference = [[databaseReference child:@"users"] child:self.currentUser.uid];
+    
+    NSLog(@"USER REFERENCE: %@", self.userReference);
+    
+}
+
+//sets up a listener for when data in the database is updated
+- (void)startMonitoringTodoUpdates{
+    
+    self.allTodosHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue
+                                                                       withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+                                                                           
+                                                                           NSMutableArray *allTodos = [[NSMutableArray alloc] init];
+                                                                           
+                                                                           for (FIRDataSnapshot *child in snapshot.children) {
+                                                                               
+                                                                               NSDictionary *todoData = child.value;
+                                                                               NSString *todoTitle = todoData[@"title"];
+                                                                               NSString *todoContent = todoData[@"content"];
+                                                                               
+                                                                               //for lab, append new 'Todo' to allTodos array
+                                                                               NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
+                                                                               
+                                                                           }
+        
+    }];
+    
 }
 
 

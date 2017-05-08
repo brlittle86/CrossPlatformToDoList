@@ -14,6 +14,9 @@
 		713A92D61EC0DDA2009C2413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713A92D51EC0DDA2009C2413 /* Assets.xcassets */; };
 		713A92D91EC0DDA2009C2413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713A92D71EC0DDA2009C2413 /* LaunchScreen.storyboard */; };
 		713A92E11EC0DFF8009C2413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713A92E01EC0DFF8009C2413 /* GoogleService-Info.plist */; };
+		713A92E41EC0EBCA009C2413 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92E31EC0EBCA009C2413 /* LoginViewController.m */; };
+		713A92E71EC10E66009C2413 /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92E61EC10E66009C2413 /* NewTodoViewController.m */; };
+		AB296A59B292495DCA82365D /* libPods-CrossPlatformToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,13 @@
 		713A92D81EC0DDA2009C2413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713A92DA1EC0DDA2009C2413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713A92E01EC0DFF8009C2413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		713A92E21EC0EBCA009C2413 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		713A92E31EC0EBCA009C2413 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		713A92E51EC10E66009C2413 /* NewTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTodoViewController.h; sourceTree = "<group>"; };
+		713A92E61EC10E66009C2413 /* NewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
+		DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossPlatformToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
+		F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB296A59B292495DCA82365D /* libPods-CrossPlatformToDoList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		264C9FAF7A217B6FEE76C77C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B13CBE7B541AEC7B21DB402 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */,
+				F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		713A92BD1EC0DDA2009C2413 = {
 			isa = PBXGroup;
 			children = (
 				713A92C81EC0DDA2009C2413 /* CrossPlatformToDoList */,
 				713A92C71EC0DDA2009C2413 /* Products */,
+				4B13CBE7B541AEC7B21DB402 /* Pods */,
+				264C9FAF7A217B6FEE76C77C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +95,10 @@
 				713A92CF1EC0DDA2009C2413 /* ViewController.h */,
 				713A92D01EC0DDA2009C2413 /* ViewController.m */,
 				713A92D21EC0DDA2009C2413 /* Main.storyboard */,
+				713A92E51EC10E66009C2413 /* NewTodoViewController.h */,
+				713A92E61EC10E66009C2413 /* NewTodoViewController.m */,
+				713A92E21EC0EBCA009C2413 /* LoginViewController.h */,
+				713A92E31EC0EBCA009C2413 /* LoginViewController.m */,
 				713A92D51EC0DDA2009C2413 /* Assets.xcassets */,
 				713A92D71EC0DDA2009C2413 /* LaunchScreen.storyboard */,
 				713A92DA1EC0DDA2009C2413 /* Info.plist */,
@@ -89,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 713A92DD1EC0DDA2009C2413 /* Build configuration list for PBXNativeTarget "CrossPlatformToDoList" */;
 			buildPhases = (
+				C4B6890AC5EFD562BEB4A127 /* [CP] Check Pods Manifest.lock */,
 				713A92C21EC0DDA2009C2413 /* Sources */,
 				713A92C31EC0DDA2009C2413 /* Frameworks */,
 				713A92C41EC0DDA2009C2413 /* Resources */,
+				7C9CA66BE36908D417153A06 /* [CP] Embed Pods Frameworks */,
+				63107D38F7AA35C81C4B700B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,13 +187,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63107D38F7AA35C81C4B700B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C9CA66BE36908D417153A06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B6890AC5EFD562BEB4A127 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		713A92C21EC0DDA2009C2413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713A92E41EC0EBCA009C2413 /* LoginViewController.m in Sources */,
 				713A92D11EC0DDA2009C2413 /* ViewController.m in Sources */,
 				713A92CE1EC0DDA2009C2413 /* AppDelegate.m in Sources */,
+				713A92E71EC10E66009C2413 /* NewTodoViewController.m in Sources */,
 				713A92CB1EC0DDA2009C2413 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +364,7 @@
 		};
 		713A92DE1EC0DDA2009C2413 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PQL3EX4TE2;
@@ -289,6 +377,7 @@
 		};
 		713A92DF1EC0DDA2009C2413 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PQL3EX4TE2;
@@ -318,6 +407,7 @@
 				713A92DF1EC0DDA2009C2413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
