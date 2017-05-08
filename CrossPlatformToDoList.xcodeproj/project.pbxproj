@@ -13,6 +13,7 @@
 		713A92D41EC0DDA2009C2413 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713A92D21EC0DDA2009C2413 /* Main.storyboard */; };
 		713A92D61EC0DDA2009C2413 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713A92D51EC0DDA2009C2413 /* Assets.xcassets */; };
 		713A92D91EC0DDA2009C2413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713A92D71EC0DDA2009C2413 /* LaunchScreen.storyboard */; };
+		713A92E11EC0DFF8009C2413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 713A92E01EC0DFF8009C2413 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		713A92D51EC0DDA2009C2413 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		713A92D81EC0DDA2009C2413 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		713A92DA1EC0DDA2009C2413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713A92E01EC0DFF8009C2413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				713A92D51EC0DDA2009C2413 /* Assets.xcassets */,
 				713A92D71EC0DDA2009C2413 /* LaunchScreen.storyboard */,
 				713A92DA1EC0DDA2009C2413 /* Info.plist */,
+				713A92E01EC0DFF8009C2413 /* GoogleService-Info.plist */,
 				713A92C91EC0DDA2009C2413 /* Supporting Files */,
 			);
 			path = CrossPlatformToDoList;
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				713A92D91EC0DDA2009C2413 /* LaunchScreen.storyboard in Resources */,
+				713A92E11EC0DFF8009C2413 /* GoogleService-Info.plist in Resources */,
 				713A92D61EC0DDA2009C2413 /* Assets.xcassets in Resources */,
 				713A92D41EC0DDA2009C2413 /* Main.storyboard in Resources */,
 			);
