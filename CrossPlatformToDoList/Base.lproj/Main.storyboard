@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-th-GHR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-th-GHR">
+                                <rect key="frame" x="0.0" y="-86" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.58039215690000001" green="0.85098039219999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FQL-oh-z6U"/>
@@ -32,12 +32,20 @@
                                     <segue destination="EIw-Kq-XeW" kind="embed" id="Xqn-f1-WlS"/>
                                 </connections>
                             </containerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-LO-7LB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eWf-th-GHR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5cU-eM-HOr"/>
-                            <constraint firstItem="eWf-th-GHR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HO1-EE-Npr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qGP-LO-7LB" secondAttribute="bottom" id="7qr-vM-mEH"/>
+                            <constraint firstItem="eWf-th-GHR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-150" id="HO1-EE-Npr"/>
+                            <constraint firstItem="qGP-LO-7LB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qzh-ig-dTY"/>
+                            <constraint firstItem="qGP-LO-7LB" firstAttribute="top" secondItem="eWf-th-GHR" secondAttribute="bottom" id="iLW-b8-gu4"/>
                             <constraint firstAttribute="trailing" secondItem="eWf-th-GHR" secondAttribute="trailing" id="nhC-d1-dh4"/>
+                            <constraint firstAttribute="trailing" secondItem="qGP-LO-7LB" secondAttribute="trailing" id="sek-7z-sID"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TODO LIST" id="uGU-MI-9X4">
@@ -52,6 +60,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addTodoContainer" destination="eWf-th-GHR" id="Xda-MM-fwq"/>
+                        <outlet property="addTodoTop" destination="HO1-EE-Npr" id="uqm-Ax-M9H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

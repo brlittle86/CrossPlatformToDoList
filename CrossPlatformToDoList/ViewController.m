@@ -18,6 +18,8 @@
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+@property (weak, nonatomic) IBOutlet UIView *addTodoContainer;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTodoTop;
 
 @end
 
@@ -94,6 +96,18 @@
 }
 
 - (IBAction)addTodoItemButtonPressed:(id)sender {
+    
+    double defaultTop = (-150);
+    double openTop = 0;
+    
+    if (self.addTodoContainer.hidden == YES) {
+        [self.addTodoContainer setHidden:NO];
+        self.addTodoTop.constant = openTop;
+    } else {
+        [self.addTodoContainer setHidden:YES];
+        self.addTodoTop.constant = defaultTop;
+    }
+    
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
