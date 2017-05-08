@@ -88,10 +88,21 @@
                                                                                NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
                                                                                
                                                                            }
-        
-    }];
+                                                                           
+                                                                       }];
     
 }
 
+- (IBAction)addTodoItemButtonPressed:(id)sender {
+}
+
+- (IBAction)logoutButtonPressed:(id)sender {
+    
+    NSError *logoutError;
+    [[FIRAuth auth] signOut:&logoutError];
+    
+    [self checkUserStatus];
+    
+}
 
 @end

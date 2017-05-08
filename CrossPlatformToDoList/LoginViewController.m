@@ -28,9 +28,6 @@
 //Handles what happens when pressing the login button
 - (IBAction)loginButtonPressed:(id)sender {
     
-//    NSError *logoutError;
-//    [[FIRAuth auth] signOut:&logoutError];
-    
     [[FIRAuth auth] signInWithEmail:self.emailTextField.text
                            password:self.passwordTextField.text
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {

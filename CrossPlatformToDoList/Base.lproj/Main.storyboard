@@ -40,7 +40,18 @@
                             <constraint firstAttribute="trailing" secondItem="eWf-th-GHR" secondAttribute="trailing" id="nhC-d1-dh4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TODO LIST" id="uGU-MI-9X4"/>
+                    <navigationItem key="navigationItem" title="TODO LIST" id="uGU-MI-9X4">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Djt-p7-hk8">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="yzA-uG-muL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="hx0-vb-d6Z">
+                            <connections>
+                                <action selector="addTodoItemButtonPressed:" destination="BYZ-38-t0r" id="uZG-ex-1ff"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
