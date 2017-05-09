@@ -15,12 +15,16 @@
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
+//Data handling property
 @property(strong, nonatomic) NSMutableArray *allTodos;
 
+//Firebase properties
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+
+//UI properties
 @property (weak, nonatomic) IBOutlet UIView *addTodoContainer;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTodoTop;
 
@@ -102,11 +106,8 @@
                                                                                todo.title = todoData[@"title"];
                                                                                todo.content = todoData[@"content"];
                                                                                
-                                                                               //for lab, append new 'Todo' to allTodos array
-                                                                               NSLog(@"Todo Title: %@ - Content: %@", todo.title, todo.content);
                                                                                [self.allTodos addObject:todo];
                                                                                [self.tableView reloadData];
-                                                                               NSLog(@"allTodos: %@", self.allTodos);
                                                                                
                                                                            }
                                                                            
