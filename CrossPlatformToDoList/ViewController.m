@@ -116,6 +116,7 @@
     
 }
 
+//Handles showing and hiding the NewTodoViewController
 - (IBAction)addTodoItemButtonPressed:(id)sender {
     
     double kDefaultTop = (-150);
@@ -131,15 +132,20 @@
     
 }
 
+//Handles logging out the current user
 - (IBAction)logoutButtonPressed:(id)sender {
     
     NSError *logoutError;
     [[FIRAuth auth] signOut:&logoutError];
     
+    [self.allTodos removeAllObjects];
+    
     [self checkUserStatus];
     
 }
 
+
+//TableView Delegate Methods
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.allTodos.count;
 }
