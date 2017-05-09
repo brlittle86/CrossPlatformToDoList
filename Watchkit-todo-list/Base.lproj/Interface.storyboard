@@ -24,9 +24,6 @@
                                             </label>
                                             <label alignment="left" text="Content" numberOfLines="0" id="KHx-2f-hEh"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="rgP-F4-ApG" kind="push" identifier="DetailsSegue" id="0q0-ha-FEu"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="contentLabel" destination="KHx-2f-hEh" id="Wf5-h8-FP6"/>
@@ -42,10 +39,10 @@
                 </controller>
             </objects>
         </scene>
-        <!--Details Interface Controller-->
+        <!--DetailsInterfaceController-->
         <scene sceneID="msj-oW-ZzX">
             <objects>
-                <controller id="rgP-F4-ApG" customClass="DetailsInterfaceController">
+                <controller identifier="DetailsInterfaceController" id="rgP-F4-ApG" customClass="DetailsInterfaceController">
                     <items>
                         <label width="1" alignment="left" text="TODO DETAILS" textAlignment="center" id="333-qx-iel"/>
                         <group width="1" height="45" alignment="left" layout="vertical" id="Pn9-IX-0ap">

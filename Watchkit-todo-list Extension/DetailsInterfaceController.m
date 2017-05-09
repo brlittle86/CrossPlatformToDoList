@@ -22,6 +22,9 @@
     
     NSLog(@"%@", context);
     
+    [self.titleLabel setText:context[@"title"]];
+    [self.contentLabel setText:context[@"content"]];
+    
     // Configure interface objects here.
 }
 

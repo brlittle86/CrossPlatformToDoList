@@ -71,16 +71,9 @@
 
 -(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
     
-    DetailsInterfaceController *selectedDetails = [[DetailsInterfaceController alloc] init];
+    NSDictionary *currentTodoDetails = @{@"title":self.allTodos[rowIndex].title, @"content":self.allTodos[rowIndex].content};
     
-    selectedDetails.currentTodo = [[Todo alloc]init];
-    selectedDetails.currentTodo = self.allTodos[rowIndex];
-    NSLog(@"%@",selectedDetails.currentTodo);
-    
-    NSDictionary *currentTodoDetails = @{@"title":selectedDetails.currentTodo.title, @"content":selectedDetails.currentTodo.content};
-    
-    [self pushControllerWithName:@"DetailInterfaceController" context:currentTodoDetails];
-//    [self contextForSegueWithIdentifier:@"DetailsSegue" inTable:table rowIndex:rowIndex];
+    [self pushControllerWithName:@"DetailsInterfaceController" context:currentTodoDetails];
     
 }
 
