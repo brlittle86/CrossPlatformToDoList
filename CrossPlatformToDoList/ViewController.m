@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LoginViewController.h"
+#import "Todo.h"
 
 @import FirebaseAuth;
 @import Firebase;
@@ -29,12 +30,18 @@
 
 @implementation ViewController
 
+-(void)loadView{
+    [super loadView];
+    
+
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -89,19 +96,21 @@
                                                                            
                                                                            for (FIRDataSnapshot *child in snapshot.children) {
                                                                                
+                                                                               Todo *todo = [[Todo alloc] init];
+                                                                               
                                                                                NSDictionary *todoData = child.value;
-                                                                               NSString *todoTitle = todoData[@"title"];
-                                                                               NSString *todoContent = todoData[@"content"];
+                                                                               todo.title = todoData[@"title"];
+                                                                               todo.content = todoData[@"content"];
                                                                                
                                                                                //for lab, append new 'Todo' to allTodos array
-                                                                               NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
-                                                                               [self.allTodos addObject:child];
+                                                                               NSLog(@"Todo Title: %@ - Content: %@", todo.title, todo.content);
+                                                                               [self.allTodos addObject:todo];
+                                                                               [self.tableView reloadData];
+                                                                               NSLog(@"allTodos: %@", self.allTodos);
                                                                                
                                                                            }
                                                                            
-                                                                           for (FIRDataSnapshot *child in self.allTodos) {
-                                                                               
-                                                                           }
+                                                                           
                                                                            
                                                                        }];
     
@@ -109,15 +118,15 @@
 
 - (IBAction)addTodoItemButtonPressed:(id)sender {
     
-    double defaultTop = (-150);
-    double openTop = 0;
+    double kDefaultTop = (-150);
+    double kOpenTop = 0;
     
     if (self.addTodoContainer.hidden == YES) {
         [self.addTodoContainer setHidden:NO];
-        self.addTodoTop.constant = openTop;
+        self.addTodoTop.constant = kOpenTop;
     } else {
         [self.addTodoContainer setHidden:YES];
-        self.addTodoTop.constant = defaultTop;
+        self.addTodoTop.constant = kDefaultTop;
     }
     
 }
@@ -141,9 +150,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    FIRDataSnapshot *child = [self.allTodos objectAtIndex:indexPath.row];
+    Todo *child = [self.allTodos objectAtIndex:indexPath.row];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", child[@"title"]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child.title];
     
     return cell;
 }
