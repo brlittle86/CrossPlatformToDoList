@@ -10,6 +10,7 @@
 #import "Todo.h"
 
 @interface DetailsInterfaceController ()
+
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *titleLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *contentLabel;
 

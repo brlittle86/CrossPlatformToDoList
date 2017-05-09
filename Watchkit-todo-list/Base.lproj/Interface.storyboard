@@ -44,11 +44,15 @@
             <objects>
                 <controller identifier="DetailsInterfaceController" id="rgP-F4-ApG" customClass="DetailsInterfaceController">
                     <items>
-                        <label width="1" alignment="left" text="TODO DETAILS" textAlignment="center" id="333-qx-iel"/>
-                        <group width="1" height="45" alignment="left" layout="vertical" id="Pn9-IX-0ap">
+                        <label width="1" alignment="left" text="TODO DETAILS" textAlignment="center" id="333-qx-iel">
+                            <fontDescription key="font" type="boldSystem" pointSize="19"/>
+                        </label>
+                        <group width="1" alignment="left" layout="vertical" id="Pn9-IX-0ap">
                             <items>
-                                <label width="1" alignment="left" text="Label" id="8p6-0V-UK1"/>
-                                <label width="1" alignment="left" text="Label" numberOfLines="0" id="VtD-VO-01s"/>
+                                <label width="1" alignment="left" text="Label" id="8p6-0V-UK1">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="left" text="Label" numberOfLines="0" id="VtD-VO-01s"/>
                             </items>
                         </group>
                     </items>
