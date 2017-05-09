@@ -120,20 +120,40 @@
                                     <action selector="signupButtonPressed:" destination="Wa6-X1-BtZ" eventType="touchUpInside" id="nxi-gc-L9P"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-9l-iEB">
+                                <rect key="frame" x="25" y="290" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.98823529409999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-Cs-3NE">
+                                <rect key="frame" x="25" y="290" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dVM-9l-iEB" secondAttribute="trailing" constant="25" id="0Gx-eP-sLh"/>
                             <constraint firstItem="8O7-Ux-48R" firstAttribute="trailing" secondItem="cwW-3R-jve" secondAttribute="trailing" id="0Qe-Fp-c5t"/>
                             <constraint firstItem="62s-82-hZr" firstAttribute="leading" secondItem="cwW-3R-jve" secondAttribute="leading" id="3Vz-GH-Y2W"/>
                             <constraint firstItem="gxJ-On-Y1W" firstAttribute="top" secondItem="I0W-FG-Yox" secondAttribute="bottom" constant="50" id="5eZ-qJ-nPK"/>
                             <constraint firstItem="cwW-3R-jve" firstAttribute="centerX" secondItem="ndQ-a4-xjJ" secondAttribute="centerX" id="7ru-Iw-Q5m"/>
+                            <constraint firstItem="dVM-9l-iEB" firstAttribute="centerX" secondItem="ndQ-a4-xjJ" secondAttribute="centerX" id="8il-eZ-yRG"/>
+                            <constraint firstItem="dVM-9l-iEB" firstAttribute="top" secondItem="8O7-Ux-48R" secondAttribute="bottom" constant="25" id="9Yn-Hf-gSw"/>
+                            <constraint firstItem="WOq-Cs-3NE" firstAttribute="top" secondItem="8O7-Ux-48R" secondAttribute="bottom" constant="25" id="FxY-Ce-xl5"/>
                             <constraint firstItem="62s-82-hZr" firstAttribute="top" secondItem="cwW-3R-jve" secondAttribute="bottom" constant="30" id="Gqc-cD-iEr"/>
+                            <constraint firstItem="WOq-Cs-3NE" firstAttribute="centerX" secondItem="ndQ-a4-xjJ" secondAttribute="centerX" id="Gub-V1-nBH"/>
                             <constraint firstItem="gxJ-On-Y1W" firstAttribute="centerX" secondItem="ndQ-a4-xjJ" secondAttribute="centerX" id="Ji3-Ui-2Mq"/>
                             <constraint firstItem="I0W-FG-Yox" firstAttribute="top" secondItem="fka-OG-CpL" secondAttribute="bottom" constant="8" id="Np2-2T-9WU"/>
                             <constraint firstItem="8O7-Ux-48R" firstAttribute="top" secondItem="cwW-3R-jve" secondAttribute="bottom" constant="30" id="Xfy-5j-kL5"/>
+                            <constraint firstItem="dVM-9l-iEB" firstAttribute="leading" secondItem="ndQ-a4-xjJ" secondAttribute="leading" constant="25" id="a1L-nU-6UR"/>
                             <constraint firstItem="gxJ-On-Y1W" firstAttribute="width" secondItem="ndQ-a4-xjJ" secondAttribute="width" multiplier="0.5" id="asY-fb-c43"/>
+                            <constraint firstItem="WOq-Cs-3NE" firstAttribute="leading" secondItem="ndQ-a4-xjJ" secondAttribute="leading" constant="25" id="euE-hi-CEq"/>
                             <constraint firstItem="cwW-3R-jve" firstAttribute="top" secondItem="gxJ-On-Y1W" secondAttribute="bottom" constant="25" id="g9s-mO-aok"/>
                             <constraint firstItem="cwW-3R-jve" firstAttribute="width" secondItem="gxJ-On-Y1W" secondAttribute="width" id="hsx-hG-34L"/>
+                            <constraint firstAttribute="trailing" secondItem="WOq-Cs-3NE" secondAttribute="trailing" constant="25" id="lZN-aR-vv4"/>
                             <constraint firstItem="I0W-FG-Yox" firstAttribute="centerX" secondItem="ndQ-a4-xjJ" secondAttribute="centerX" id="nUE-vI-gps"/>
                             <constraint firstItem="62s-82-hZr" firstAttribute="width" secondItem="cwW-3R-jve" secondAttribute="width" multiplier="0.5" id="o5B-tz-wVa"/>
                             <constraint firstItem="8O7-Ux-48R" firstAttribute="width" secondItem="cwW-3R-jve" secondAttribute="width" multiplier="0.5" id="z3i-fP-CBg"/>
@@ -141,7 +161,9 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gxJ-On-Y1W" id="7zg-qK-tBp"/>
+                        <outlet property="loginErrorLabel" destination="dVM-9l-iEB" id="BmB-ql-8Iv"/>
                         <outlet property="passwordTextField" destination="cwW-3R-jve" id="TRg-jm-Ekz"/>
+                        <outlet property="signupSuccessLabel" destination="WOq-Cs-3NE" id="JRf-4W-LoQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEo-Mt-Yfo" userLabel="First Responder" sceneMemberID="firstResponder"/>

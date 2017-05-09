@@ -15,6 +15,8 @@
 //Properties for the text fields
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signupSuccessLabel;
 
 @end
 
@@ -33,11 +35,21 @@
                          completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         
                              if (error) {
+                                 [self.signupSuccessLabel setHidden:YES];
                                  NSLog(@"Error Signing In: %@", error.localizedDescription);
+                                 if ([error.localizedDescription containsString:@"There is no user record corresponding to this identifier."] || [error.localizedDescription containsString:@"The password is invalid or the user does not have a password."]) {
+                                     self.loginErrorLabel.text = @"User not found. Please verify login information and try again, or sign up.";
+                                     [self.loginErrorLabel setHidden:NO];
+                                 } else if ([error.localizedDescription containsString:@"The email address is badly formatted."]) {
+                                     self.loginErrorLabel.text = @"Please enter a valid email address.";
+                                     [self.loginErrorLabel setHidden:NO];
+                                 }
                              }
                              
                              if (user) {
                                  NSLog(@"Logged In User: %@", user);
+                                 [self.signupSuccessLabel setHidden:YES];
+                                 [self.loginErrorLabel setHidden:YES];
                                  [self dismissViewControllerAnimated:YES completion:nil];
                              }
                              
@@ -54,10 +66,20 @@
                                  
                                  if (error) {
                                      NSLog(@"Error Signing Up New User: %@", error.localizedDescription);
+                                     if ([error.localizedDescription containsString:@"The email address is badly formatted."]) {
+                                         self.loginErrorLabel.text = @"Please enter a valid email address.";
+                                         [self.loginErrorLabel setHidden:NO];
+                                     } else if ([error.localizedDescription containsString:@"The password must be 6 characters long or more."]) {
+                                         self.loginErrorLabel.text = @"Passwords must be at least 6 characters long. Please try again.";
+                                         [self.loginErrorLabel setHidden:NO];
+                                     }
                                  }
                                  
                                  if (user) {
                                      NSLog(@"Successfully Signed Up User: %@", user);
+                                     [self.loginErrorLabel setHidden:YES];
+                                     self.signupSuccessLabel.text = @"User successfully registered. Please log in.";
+                                     [self.signupSuccessLabel setHidden:NO];
                                  }
                                  
     }];
