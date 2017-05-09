@@ -10,7 +10,7 @@
 
 #import "Todo.h"
 
-@interface TVHomeViewController () <UITableViewDataSource>
+@interface TVHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray<Todo *> *allTodos;
@@ -24,6 +24,7 @@
     // Do any additional setup after loading the view.
     
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     
 }
 
@@ -60,6 +61,10 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.allTodos.count;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 @end
