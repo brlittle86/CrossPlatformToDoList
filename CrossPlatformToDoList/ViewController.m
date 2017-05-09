@@ -126,9 +126,17 @@
     if (self.addTodoContainer.hidden == YES) {
         [self.addTodoContainer setHidden:NO];
         self.addTodoTop.constant = kOpenTop;
+        [UIView animateWithDuration:0.4 animations:^{
+            [self.view layoutIfNeeded];
+        }];
     } else {
-        [self.addTodoContainer setHidden:YES];
         self.addTodoTop.constant = kDefaultTop;
+        [UIView animateWithDuration:0.4 delay:0.0 options:0 animations:^{
+            [self.view layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            [self.addTodoContainer setHidden:YES];
+        }];
+
     }
     
 }
