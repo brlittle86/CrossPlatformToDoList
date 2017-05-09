@@ -163,12 +163,13 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
     Todo *child = [self.allTodos objectAtIndex:indexPath.row];
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@", child.title];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", child.content];
     
     return cell;
 }
