@@ -139,6 +139,7 @@
     [[FIRAuth auth] signOut:&logoutError];
     
     [self.allTodos removeAllObjects];
+    [self.tableView reloadData];
     
     [self checkUserStatus];
     
