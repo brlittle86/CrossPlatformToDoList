@@ -8,6 +8,7 @@
 
 #import "InterfaceController.h"
 #import "TodoRowController.h"
+#import "DetailsInterfaceController.h"
 
 #import "Todo.h"
 
@@ -69,7 +70,18 @@
 }
 
 -(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
-    //use for lab, because reasons
+    
+    DetailsInterfaceController *selectedDetails = [[DetailsInterfaceController alloc] init];
+    
+    selectedDetails.currentTodo = [[Todo alloc]init];
+    selectedDetails.currentTodo = self.allTodos[rowIndex];
+    NSLog(@"%@",selectedDetails.currentTodo);
+    
+    NSDictionary *currentTodoDetails = @{@"title":selectedDetails.currentTodo.title, @"content":selectedDetails.currentTodo.content};
+    
+    [self pushControllerWithName:@"DetailInterfaceController" context:currentTodoDetails];
+//    [self contextForSegueWithIdentifier:@"DetailsSegue" inTable:table rowIndex:rowIndex];
+    
 }
 
 @end
