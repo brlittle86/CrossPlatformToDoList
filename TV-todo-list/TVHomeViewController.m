@@ -7,6 +7,7 @@
 //
 
 #import "TVHomeViewController.h"
+#import "TVDetailViewController.h"
 
 #import "Todo.h"
 
@@ -64,7 +65,10 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TVDetailViewController *detailView = [self.storyboard instantiateViewControllerWithIdentifier:@"TVDetailViewController"];
+    detailView.currentTodo = self.allTodos[indexPath.row];
     
+    [self presentViewController:detailView animated:YES completion:nil];
 }
 
 @end

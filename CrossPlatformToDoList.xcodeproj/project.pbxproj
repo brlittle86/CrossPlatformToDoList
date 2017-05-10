@@ -33,6 +33,7 @@
 		713A93331EC248B4009C2413 /* TVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93321EC248B4009C2413 /* TVHomeViewController.m */; };
 		713A93341EC249C7009C2413 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92EC1EC13B98009C2413 /* Todo.m */; };
 		713A933A1EC27606009C2413 /* DetailsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93391EC27606009C2413 /* DetailsInterfaceController.m */; };
+		713A933D1EC28909009C2413 /* TVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A933C1EC28909009C2413 /* TVDetailViewController.m */; };
 		AB296A59B292495DCA82365D /* libPods-CrossPlatformToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		713A93321EC248B4009C2413 /* TVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVHomeViewController.m; sourceTree = "<group>"; };
 		713A93381EC27606009C2413 /* DetailsInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsInterfaceController.h; sourceTree = "<group>"; };
 		713A93391EC27606009C2413 /* DetailsInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsInterfaceController.m; sourceTree = "<group>"; };
+		713A933B1EC28909009C2413 /* TVDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVDetailViewController.h; sourceTree = "<group>"; };
+		713A933C1EC28909009C2413 /* TVDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVDetailViewController.m; sourceTree = "<group>"; };
 		DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossPlatformToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +285,8 @@
 				713A93281EC246C1009C2413 /* Main.storyboard */,
 				713A93311EC248B4009C2413 /* TVHomeViewController.h */,
 				713A93321EC248B4009C2413 /* TVHomeViewController.m */,
+				713A933B1EC28909009C2413 /* TVDetailViewController.h */,
+				713A933C1EC28909009C2413 /* TVDetailViewController.m */,
 				713A932B1EC246C1009C2413 /* Assets.xcassets */,
 				713A932D1EC246C1009C2413 /* Info.plist */,
 				713A931F1EC246C1009C2413 /* Supporting Files */,
@@ -546,6 +551,7 @@
 				713A93241EC246C1009C2413 /* AppDelegate.m in Sources */,
 				713A93211EC246C1009C2413 /* main.m in Sources */,
 				713A93331EC248B4009C2413 /* TVHomeViewController.m in Sources */,
+				713A933D1EC28909009C2413 /* TVDetailViewController.m in Sources */,
 				713A93341EC249C7009C2413 /* Todo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

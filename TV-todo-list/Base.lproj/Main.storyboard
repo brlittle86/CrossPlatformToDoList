@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TVHomeViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TVHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -61,17 +61,19 @@
                             <constraint firstItem="7a3-vn-Uiz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="cob-wa-Xh1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lND-pf-fCJ"/>
                     <connections>
                         <outlet property="tableView" destination="7a3-vn-Uiz" id="ywn-6E-cJa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2198" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="JtO-dc-faJ">
             <objects>
-                <viewController id="uZK-H3-XDg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TVDetailViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uZK-H3-XDg" customClass="TVDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JhK-qD-VgO"/>
                         <viewControllerLayoutGuide type="bottom" id="zqI-Gz-DGC"/>
@@ -111,10 +113,14 @@
                             <constraint firstItem="K9k-sr-KPd" firstAttribute="centerX" secondItem="RUc-ne-LvW" secondAttribute="centerX" constant="-350" id="tAc-Q9-4kn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="9e1-yd-Rq4" id="imo-Zp-zeR"/>
+                        <outlet property="titleLabel" destination="K9k-sr-KPd" id="smy-zl-iNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yPX-Xa-f3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="75"/>
+            <point key="canvasLocation" x="4306" y="75"/>
         </scene>
     </scenes>
 </document>
