@@ -34,6 +34,8 @@
 		713A93341EC249C7009C2413 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A92EC1EC13B98009C2413 /* Todo.m */; };
 		713A933A1EC27606009C2413 /* DetailsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93391EC27606009C2413 /* DetailsInterfaceController.m */; };
 		713A933D1EC28909009C2413 /* TVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A933C1EC28909009C2413 /* TVDetailViewController.m */; };
+		713A93401EC29D44009C2413 /* CompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A933F1EC29D44009C2413 /* CompletedViewController.m */; };
+		713A93431EC2ABEF009C2413 /* CompletedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93421EC2ABEF009C2413 /* CompletedTableViewCell.m */; };
 		AB296A59B292495DCA82365D /* libPods-CrossPlatformToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,10 @@
 		713A93391EC27606009C2413 /* DetailsInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsInterfaceController.m; sourceTree = "<group>"; };
 		713A933B1EC28909009C2413 /* TVDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVDetailViewController.h; sourceTree = "<group>"; };
 		713A933C1EC28909009C2413 /* TVDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVDetailViewController.m; sourceTree = "<group>"; };
+		713A933E1EC29D44009C2413 /* CompletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedViewController.h; sourceTree = "<group>"; };
+		713A933F1EC29D44009C2413 /* CompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedViewController.m; sourceTree = "<group>"; };
+		713A93411EC2ABEF009C2413 /* CompletedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTableViewCell.h; sourceTree = "<group>"; };
+		713A93421EC2ABEF009C2413 /* CompletedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTableViewCell.m; sourceTree = "<group>"; };
 		DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossPlatformToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +232,8 @@
 				713A92E61EC10E66009C2413 /* NewTodoViewController.m */,
 				713A92E21EC0EBCA009C2413 /* LoginViewController.h */,
 				713A92E31EC0EBCA009C2413 /* LoginViewController.m */,
+				713A933E1EC29D44009C2413 /* CompletedViewController.h */,
+				713A933F1EC29D44009C2413 /* CompletedViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +254,8 @@
 			children = (
 				713A92D21EC0DDA2009C2413 /* Main.storyboard */,
 				713A92D71EC0DDA2009C2413 /* LaunchScreen.storyboard */,
+				713A93411EC2ABEF009C2413 /* CompletedTableViewCell.h */,
+				713A93421EC2ABEF009C2413 /* CompletedTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -526,9 +536,11 @@
 				713A92E41EC0EBCA009C2413 /* LoginViewController.m in Sources */,
 				713A92ED1EC13B98009C2413 /* Todo.m in Sources */,
 				713A92D11EC0DDA2009C2413 /* ViewController.m in Sources */,
+				713A93431EC2ABEF009C2413 /* CompletedTableViewCell.m in Sources */,
 				713A92CE1EC0DDA2009C2413 /* AppDelegate.m in Sources */,
 				713A92E71EC10E66009C2413 /* NewTodoViewController.m in Sources */,
 				713A92CB1EC0DDA2009C2413 /* main.m in Sources */,
+				713A93401EC29D44009C2413 /* CompletedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
