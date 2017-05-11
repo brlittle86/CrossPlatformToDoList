@@ -38,6 +38,7 @@
     [[newTodoReference child:@"content"] setValue:self.contentTextField.text];
     [[newTodoReference child:@"completed"] setValue:@0];
     [[newTodoReference child:@"key"] setValue:newTodoReference.key];
+    [[newTodoReference child:@"user"] setValue:currentUser.email];
     
     self.titleTextField.text = nil;
     self.contentTextField.text = nil;

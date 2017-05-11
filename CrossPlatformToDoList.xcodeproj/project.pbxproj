@@ -36,6 +36,8 @@
 		713A933D1EC28909009C2413 /* TVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A933C1EC28909009C2413 /* TVDetailViewController.m */; };
 		713A93401EC29D44009C2413 /* CompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A933F1EC29D44009C2413 /* CompletedViewController.m */; };
 		713A93431EC2ABEF009C2413 /* CompletedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93421EC2ABEF009C2413 /* CompletedTableViewCell.m */; };
+		713A93471EC38436009C2413 /* FirebaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93461EC38436009C2413 /* FirebaseAPI.m */; };
+		713A934A1EC3C424009C2413 /* TVEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713A93491EC3C424009C2413 /* TVEmailViewController.m */; };
 		AB296A59B292495DCA82365D /* libPods-CrossPlatformToDoList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,11 @@
 		713A933F1EC29D44009C2413 /* CompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedViewController.m; sourceTree = "<group>"; };
 		713A93411EC2ABEF009C2413 /* CompletedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedTableViewCell.h; sourceTree = "<group>"; };
 		713A93421EC2ABEF009C2413 /* CompletedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedTableViewCell.m; sourceTree = "<group>"; };
+		713A93441EC382F5009C2413 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		713A93451EC38436009C2413 /* FirebaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseAPI.h; sourceTree = "<group>"; };
+		713A93461EC38436009C2413 /* FirebaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAPI.m; sourceTree = "<group>"; };
+		713A93481EC3C424009C2413 /* TVEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVEmailViewController.h; sourceTree = "<group>"; };
+		713A93491EC3C424009C2413 /* TVEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVEmailViewController.m; sourceTree = "<group>"; };
 		DBB1DA2742568F7D4F822A5D /* libPods-CrossPlatformToDoList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrossPlatformToDoList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5F04E52D8EC02875E1F7008 /* Pods-CrossPlatformToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.debug.xcconfig"; sourceTree = "<group>"; };
 		F64A44B2AB73856C4877B0AF /* Pods-CrossPlatformToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossPlatformToDoList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossPlatformToDoList/Pods-CrossPlatformToDoList.release.xcconfig"; sourceTree = "<group>"; };
@@ -293,12 +300,17 @@
 				713A93221EC246C1009C2413 /* AppDelegate.h */,
 				713A93231EC246C1009C2413 /* AppDelegate.m */,
 				713A93281EC246C1009C2413 /* Main.storyboard */,
+				713A93481EC3C424009C2413 /* TVEmailViewController.h */,
+				713A93491EC3C424009C2413 /* TVEmailViewController.m */,
 				713A93311EC248B4009C2413 /* TVHomeViewController.h */,
 				713A93321EC248B4009C2413 /* TVHomeViewController.m */,
 				713A933B1EC28909009C2413 /* TVDetailViewController.h */,
 				713A933C1EC28909009C2413 /* TVDetailViewController.m */,
 				713A932B1EC246C1009C2413 /* Assets.xcassets */,
 				713A932D1EC246C1009C2413 /* Info.plist */,
+				713A93441EC382F5009C2413 /* Header.h */,
+				713A93451EC38436009C2413 /* FirebaseAPI.h */,
+				713A93461EC38436009C2413 /* FirebaseAPI.m */,
 				713A931F1EC246C1009C2413 /* Supporting Files */,
 			);
 			path = "TV-todo-list";
@@ -561,6 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				713A93241EC246C1009C2413 /* AppDelegate.m in Sources */,
+				713A93471EC38436009C2413 /* FirebaseAPI.m in Sources */,
+				713A934A1EC3C424009C2413 /* TVEmailViewController.m in Sources */,
 				713A93211EC246C1009C2413 /* main.m in Sources */,
 				713A93331EC248B4009C2413 /* TVHomeViewController.m in Sources */,
 				713A933D1EC28909009C2413 /* TVDetailViewController.m in Sources */,
