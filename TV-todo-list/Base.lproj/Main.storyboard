@@ -70,6 +70,57 @@
             </objects>
             <point key="canvasLocation" x="2198" y="75"/>
         </scene>
+        <!--Email View Controller-->
+        <scene sceneID="Qrc-Ii-f7n">
+            <objects>
+                <viewController id="eIL-JE-ALf" customClass="TVEmailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S5T-9T-uB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="PGx-5Z-H0V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qMC-W5-09Y">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axl-bP-0tu">
+                                <rect key="frame" x="756" y="124" width="409" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uK9-Hn-Dla">
+                                <rect key="frame" x="756" y="200" width="409" height="46"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glh-KP-0tP">
+                                <rect key="frame" x="859" y="301" width="202" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPressed:" destination="eIL-JE-ALf" eventType="primaryActionTriggered" id="zH9-DE-OAd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uK9-Hn-Dla" firstAttribute="width" secondItem="axl-bP-0tu" secondAttribute="width" id="2Ob-tT-IGX"/>
+                            <constraint firstItem="glh-KP-0tP" firstAttribute="centerX" secondItem="qMC-W5-09Y" secondAttribute="centerX" id="5LW-I6-Fg4"/>
+                            <constraint firstItem="uK9-Hn-Dla" firstAttribute="top" secondItem="axl-bP-0tu" secondAttribute="bottom" constant="30" id="Fvb-P7-0UA"/>
+                            <constraint firstItem="glh-KP-0tP" firstAttribute="top" secondItem="uK9-Hn-Dla" secondAttribute="bottom" constant="55" id="P4y-3z-jCn"/>
+                            <constraint firstItem="uK9-Hn-Dla" firstAttribute="centerX" secondItem="qMC-W5-09Y" secondAttribute="centerX" id="Wfh-WN-6HV"/>
+                            <constraint firstItem="axl-bP-0tu" firstAttribute="top" secondItem="S5T-9T-uB7" secondAttribute="bottom" constant="124" id="c08-pI-dHe"/>
+                            <constraint firstItem="axl-bP-0tu" firstAttribute="centerX" secondItem="qMC-W5-09Y" secondAttribute="centerX" id="rZg-a5-6YZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="uK9-Hn-Dla" id="zs1-Cq-CyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agE-gG-L3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="1409"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="JtO-dc-faJ">
             <objects>

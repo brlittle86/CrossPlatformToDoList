@@ -39,6 +39,7 @@
                         newTodo.key = todoDictionary[@"key"];
                         newTodo.completed = todoDictionary[@"completed"];
                         
+                        //insert if statement here, to only add todo with user's email
                         [allTodos addObject:newTodo];
                         
                     }

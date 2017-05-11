@@ -104,6 +104,7 @@
             NSDictionary *todoData = child.value;
             NSString *todoTitle = todoData[@"title"];
             NSString *todoContent = todoData[@"content"];
+            NSString *todoKey = todoData[@"key"];
             NSNumber *todoCompleted = todoData[@"completed"];
             
             //for lab append new todo to all todos array
@@ -111,6 +112,7 @@
                 Todo *currentTodo = [[Todo alloc] init];
                 currentTodo.title = todoTitle;
                 currentTodo.content = todoContent;
+                currentTodo.key = todoKey;
                 [self.allTodos addObject:currentTodo];
             }
         }
